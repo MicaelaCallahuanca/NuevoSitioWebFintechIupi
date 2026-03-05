@@ -34,7 +34,7 @@ const Problem = () => {
             Si nunca invertiste, no es tu culpa
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Nuestro cerebro busca seguridad ante lo desconocido. Por eso lo nuevo da miedo… y está bien sentirse así.
+            El cerebro busca seguridad, por eso todo lo nuevo se siente amenazante.
           </p>
         </motion.div>
 

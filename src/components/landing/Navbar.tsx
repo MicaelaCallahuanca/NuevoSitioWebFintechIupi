@@ -19,6 +19,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const scrollToWaitlist = () => {
+    document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" });
+    setMobileOpen(false);
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -30,7 +35,6 @@ const Navbar = () => {
           iUpi
         </a>
 
-        {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
@@ -41,12 +45,11 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <Button variant="cta" size="sm" className="rounded-full px-6">
-            Join Waitlist
+          <Button variant="cta" size="sm" className="rounded-full px-6" onClick={scrollToWaitlist}>
+            Sumarme a la lista
           </Button>
         </div>
 
-        {/* Mobile toggle */}
         <button
           className="md:hidden text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -55,7 +58,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -75,8 +77,8 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="cta" size="sm" className="rounded-full mt-2">
-                Join Waitlist
+              <Button variant="cta" size="sm" className="rounded-full mt-2" onClick={scrollToWaitlist}>
+                Sumarme a la lista
               </Button>
             </div>
           </motion.div>

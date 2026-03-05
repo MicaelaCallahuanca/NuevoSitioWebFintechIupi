@@ -4,26 +4,26 @@ import { BookOpen, LineChart, Eye, Rocket } from "lucide-react";
 const steps = [
   {
     icon: BookOpen,
-    step: "1",
+    step: "01",
     title: "Aprendés lo esencial",
     description: "Conceptos explicados como si te hablara un amigo.",
   },
   {
     icon: LineChart,
-    step: "2",
+    step: "02",
     title: "Probás en el simulador",
     description: "Invertís sin riesgo y experimentás libremente.",
   },
   {
     icon: Eye,
-    step: "3",
+    step: "03",
     title: "Ves el impacto",
     description: "Resultados claros y escenarios reales.",
   },
   {
     icon: Rocket,
-    step: "4",
-    title: "Das el salto",
+    step: "04",
+    title: "Das el salto cuando te sentís listo",
     description: "Cuando entendés, recién ahí pasás al mundo real.",
   },
 ];
